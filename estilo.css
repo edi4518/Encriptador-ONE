@@ -1,8 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
 body{
     display: grid;
-    grid-template-rows: auto 718px auto;
-    gap: 0.4em;
+    grid-template-rows: auto 660px auto;
     width: 100%;
+    min-height: 100vh;
     background: #ffffff
    
 }
@@ -54,14 +65,14 @@ header{
 
 /* Cuerpo de la pagina */
     main{
-        width: 1200px;
-        height: 96%;
+        width: 80vw;
+        height: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        border-radius: 10px;
         border: 5px solid black;
+        border-radius: 15px;
         margin: 0 auto;
-        margin-top: 8px;
+        
         
        
     }
@@ -112,7 +123,7 @@ header{
 
     .contenedor-botones{
         text-align: center;
-        margin-top: 75px;
+        margin-top: 35px;
         width: 100%;
         
     }
@@ -154,7 +165,7 @@ header{
         grid-column: 3/4;
         width: 100%;
         height: 100%;
-        border-radius: 15px;
+        border-radius: 5px;
         margin: 0 auto;
         box-sizing: border-box;
         overflow: hidden;
@@ -327,7 +338,9 @@ header{
     @media screen and (max-width: 1200px){
         main{
             width: 100%;
-            
+            border-left: none;
+            border-right: none;
+            border-radius: 0;
 
         }
         
@@ -476,27 +489,31 @@ header{
                                 "Main"
                                 "Main"
                                 "Footer";
-           
+           gap: 0.1em;
         }
         header{
             grid-area: Header;
-            height: 70px;
+            height: 50px;
 
         }
         .encabezado{
             background-color: #4495ca;
-                    
+            
         }
 
         .logo-encabezado{
             width: 30px;
-            height: 70%;
+            height: 90%;
+            margin-left: 15px;
+            padding-bottom: 3px;
         }
 
         
         .h1-tituloppal{
-            font-size: 22px;
+            font-size: 15px;
             color: #ffffff;
+            margin: 15px auto;
+
         }
 
         main{
@@ -504,19 +521,28 @@ header{
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            height: 655px;
+            height: 660px;
             margin: 0 auto;
+        }
+
+        .seccion-texto{
+            height: 470px;
+        }
+
+        .contenedor-area-adv{
+            margin-top: 5px auto;
         }
 
 
         .contenedor-botones{
             display: flex;
-            height: 180px;
+            height: 160px;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
             padding: 0;
             margin: 0 auto;
+            margin-top: 15px;
 
         }
 
@@ -535,7 +561,7 @@ header{
 
         .seccion-paneldcho{
             height: 180px;
-            margin-top: 30px;
+            margin: 0 auto;
         }
 
         .contenedor-resultado{
@@ -553,7 +579,7 @@ header{
             height: 70px;
             margin: 0;
             padding: 0;
-            font-size: 22px;
+            font-size: 12px;
             font-weight: bold;
             
         }
@@ -573,6 +599,10 @@ header{
         footer{
             grid-area: Footer;
 
+        }
+
+        .copyright{
+            font-size: 10px;
         }
     
     }
